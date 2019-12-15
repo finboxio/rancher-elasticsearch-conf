@@ -1,0 +1,13 @@
+metadata-version = "2015-12-19"
+log-level = "debug"
+onetime = true
+
+[[ template ]]
+source = "/etc/rancher-conf/elasticsearch.yml.tmpl"
+dest = "/etc/rancher-conf/elasticsearch/elasticsearch.yml"
+check-cmd = "sh /etc/rancher-conf/setup.sh"
+
+[[ template ]]
+source = "/etc/rancher-conf/log4j2.properties"
+dest = "/etc/rancher-conf/elasticsearch/log4j2.properties"
+check-cmd = "sh /etc/rancher-conf/setup.sh"

@@ -11,3 +11,8 @@ check-cmd = "sh /etc/rancher-conf/setup.sh"
 source = "/etc/rancher-conf/log4j2.properties"
 dest = "/etc/rancher-conf/elasticsearch/log4j2.properties"
 check-cmd = "sh /etc/rancher-conf/setup.sh"
+
+[[ template ]]
+source = "/etc/rancher-conf/jvm.options"
+dest = "/etc/rancher-conf/elasticsearch/jvm.options"
+check-cmd = "sh /etc/rancher-conf/setup.sh"

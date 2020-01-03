@@ -1,5 +1,7 @@
+ELASTICSEARCH_USER_ID=${ELASTICSEARCH_USER_ID:-1000}
+
 userdel elasticsearch &>/dev/null
-adduser -u 101 elasticsearch -D
+adduser -u $ELASTICSEARCH_USER_ID elasticsearch -D
 
 datadir=$(cat /etc/rancher-conf/elasticsearch/elasticsearch.yml | grep path.data | awk -F: '{ print $2 }')
 if [[ "$datadir" != "" ]]; then

@@ -1,6 +1,8 @@
-FROM finboxio/rancher-conf-aws:v0.4.1
+FROM finboxio/rancher-conf-aws:v0.4.2
 
 VOLUME /etc/rancher-conf/elasticsearch
+
+ADD run.sh /opt/rancher/bin/
 
 ADD config.toml /etc/rancher-conf/
 ADD elasticsearch.yml.tmpl /etc/rancher-conf/

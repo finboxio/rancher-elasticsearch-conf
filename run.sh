@@ -1,9 +1,10 @@
+#!/bin/bash
+
 # Copied from ELasticsearch 7.5.1 with minor changee
 # to check ES_PATH_CONF for keystore instead of default
 # direectory
 # Follow here: https://github.com/elastic/elasticsearch/pull/50865
 
-#!/bin/bash
 set -e
 
 # Files created by Elasticsearch should always be group writable too

@@ -12,7 +12,7 @@ discovery.zen.ping.unicast.hosts:
 {{- end }}
 
 {{ range $key, $value := service.Parent.Labels }}
-{{- if eq (index (split $key ".") 0) "es" }}
-{{ replace $key "es." "" 1 }}: {{ $value }}
+{{- if eq (index (splitList "." $key) 0) "es" }}
+{{ substr 3 (len $key) $key }}: {{ $value }}
 {{- end }}
 {{- end }}

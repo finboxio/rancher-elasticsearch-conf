@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Copied from ELasticsearch 7.5.1 with minor changee
+# Copied from Elasticsearch 7.5.1 with minor change
 # to check ES_PATH_CONF for keystore instead of default
-# direectory
+# directory
 # Follow here: https://github.com/elastic/elasticsearch/pull/50865
 
 set -e

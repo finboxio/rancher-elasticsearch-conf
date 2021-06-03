@@ -1,6 +1,5 @@
 metadata-version = "2015-12-19"
 log-level = "debug"
-onetime = true
 
 [[ template ]]
 source = "/etc/rancher-conf/elasticsearch.yml.tmpl"

@@ -1,4 +1,4 @@
-FROM finboxio/rancher-conf-aws:v1.2.0
+FROM finboxio/rancher-conf-aws:v1.3.0
 
 VOLUME /etc/rancher-conf/elasticsearch
 

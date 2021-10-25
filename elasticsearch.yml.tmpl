@@ -2,12 +2,15 @@
 
 bootstrap.memory_lock: true
 
+{{- $discovery := service.Parent.Labels.GetValue "es.discovery.seed_hosts" "" }}
+{{- if eq $discovery "" }}
 discovery.zen.ping.unicast.hosts:
 {{- $stack := self.Stack }}
 {{- $cluster := service.Parent.Labels.GetValue "es.cluster.name" "-" }}
 {{- range $service := whereLabelEquals "es.cluster.name" $cluster services }}
 {{- if eq $service.Stack $stack }}
   - {{ .Name }}
+{{- end }}
 {{- end }}
 {{- end }}
 
